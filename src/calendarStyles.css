@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+
+.calendarGrid {
+  max-width: 350px;
+  max-height: 350px;
+  min-width: 200px;
+  min-height: 200px;
+  width: 80vmin;
+  height: 80vmin;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  user-select: none;
+  background-color: white;
+}
+
+.darkOverlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #00000070;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.3) 0px 15px 12px;
+  overflow-y: hidden;
+  z-index: 10000000;
+}
+
+.calendarWrapper {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  background-color: white;
+  border-radius: 10px;
+  align-items: center;
+  padding-bottom: 10px;
+  z-index: 999999999;
+}
+
+.calendarContainer {
+  max-width: 600px;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.monthAndYear {
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.75);
+  height: 50px;
+  font-weight: 400;
+  align-items: center;
+  margin-bottom: -20px;
+  padding: 0 25px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.monthAndYear .nextButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100%;
+  font-size: 2.2rem;
+  gap: 25px;
+}
+
+.calendarSlot,
+.availableDay,
+.unavailableDay {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.533);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.availableDay,
+.availableDay {
+  cursor: pointer;
+  color: #000;
+  border-radius: 50px;
+  font-weight: 100;
+  transition: all 0.2s ease-in-out;
+}
+
+.unavailableDay {
+  color: rgba(0, 0, 0, 0.137);
+}
+
+.availableDay:hover {
+  background-color: #627e7825;
+}
+
+.availableDay.selected {
+  border: 1.5px solid #627e78;
+  color: #627e78;
+}
+
+.arrowButton,
+.arrowButtonDisabled {
+  border-radius: 20px;
+  padding: 5px 10px;
+  transition: all 0.15s ease-in-out;
+}
+
+.arrowButton:hover {
+  background-color: #627e7825;
+}
+
+.arrowButtonDisabled {
+  color: rgba(0, 0, 0, 0.223);
+}
+
+.timesWrapper,
+.timesWrapperLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: content-box;
+}
+
+.timesWrapperLoading {
+  justify-content: center;
+}
+
+.timesHeading h1 {
+  font-weight: 500;
+}
+.timesHeading {
+  letter-spacing: 2px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  /* margin-left: 20px; */
+}
+.timesWrapper img {
+  width: 70px;
+}
+
+.scheduleOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-top: -30px; */
+}
+
+.scheduleOptions > span > img {
+  /* margin: 50px 0; */
+  width: 70px;
+}
+
+.selectLabel {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4b625d;
+}
+
+.headingWrapper {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
